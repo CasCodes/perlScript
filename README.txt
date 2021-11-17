@@ -12,8 +12,12 @@
 	- kopieren von dem inhalt mehrerer .pde files in ein html dokument
 	- hinzufügen eines html code blocks um den processing code herum
 	- ein netter html kommentar mit dem namen des .pde files
+	- dynamische html headings, id & filepath
+
+	TIPP: Nenne deine .pde files so, wie auch die headings auf der webiste später sein sollen (denn z.B. 6_1_b.pde ->wird zu-> <h2> 6_1_b </h2> )
 
 	!WICHTIG! beachte, dass das scrpit name sensitive ist, also verwende genau die dokument und ordner namen!
+
 
 > step by step:
 	0. ziehe deine .pde dokumente in den perlScript/pdeFiles ordner
@@ -30,7 +34,6 @@
 		- check ob die files im pdeFiles ordner .pde files sind
 		- check ob du einen pdeFiles ordner überhaupt hast, du noob
 
- 
           __
      w  c(..)o   (
       \__(-)    __)
