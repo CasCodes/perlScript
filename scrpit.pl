@@ -33,7 +33,6 @@ while (defined(my $file = glob 'pdeFiles/*.pde')) {
   elsif ("$choice" eq "l") {
     $useImg = 0;
   }
-  print "$useImg\n";
 
   # add top html
   print $ofh "\n <!--$taskName--> \n";
@@ -48,13 +47,24 @@ while (defined(my $file = glob 'pdeFiles/*.pde')) {
   print $ofh "\n";
   print $ofh "</code></pre>";
 
+  # live code
+  if ($useImg == 0){
   print $ofh "<div class=\"task_pde_holder\"> \n";
   print $ofh "  <div class=\"task_pde\"> \n";
   print $ofh "    <h2 class=\"purple\">RESULT:</h2>\n";
   print $ofh "  <div class=\"task_pde\"> \n";
   print $ofh "  <canvas class=\"pde-doc\" id=\"theCanvas\" data-processing-sources=\"./pde_docs/sketches/$fileName\" style=\"image-rendering: !important;\"></canvas>\n";
   print $ofh "</div></div></div>\n";
-  
+  }
+  # img block
+  elsif ($useImg == 1){
+  print $ofh "<div class=\"task_pde_holder\"> \n";
+  print $ofh "  <div class=\"task_pde\"> \n";
+  print $ofh "    <h2 class=\"purple\">RESULT:</h2>\n";
+  print $ofh "  <div class=\"task_pde\"> \n";
+  print $ofh "  <img class=\"pde-doc\" src=\"./pde_docs/$taskName.png\"/> \n";
+  print $ofh "</div></div></div>\n";
+  }
   close $ifh;
 }
 close $ofh;
