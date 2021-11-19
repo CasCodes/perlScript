@@ -20,6 +20,7 @@
 
 
 > step by step:
+	git clone dieses repo
 	0. ziehe deine sketch ordner in den perlScript/pdeFiles ordner
 	1. wenn in dem /perlScript ordner kein output.html ist, erstelle es!
 	2. öffne ein terminal und geh in den perlScript ordner (cd <filepath>)
