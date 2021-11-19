@@ -17,11 +17,13 @@ my $fileName;
 my $useImg = 0;
 my $choice;
 # loop over the .pde files in pdeFiles folder
-while (defined(my $file = glob 'pdeFiles/*.pde')) {
-  open my $ifh, "<", $file;  # open infile
+while (defined(my $file = glob "pdeFiles/*")) {
+  $fileName = substr($file, 8) . ".pde"; # filename (name of folder) +.pde
+  
+  open my $ifh, "<", "$file/$fileName";  # open taskFolder/task.pde 
  
-  $taskName = substr($file, 9, -4); # cut the name of $file to the task name
-  $fileName = substr($file, 9); # *.pde filename
+  $taskName = substr($file, 16); # cut the name of $file to the task name
+  
   
   # ask for image/live block
   print "image or live code for $fileName? [i/l] >\n";
