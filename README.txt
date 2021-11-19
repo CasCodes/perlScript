@@ -4,7 +4,7 @@
 
 > Es gibt 4 Dokumente: 
 	- scrpit.pl 	-> das magische skript
-	- pdeFiles 		-> In diesen ordner kommen die .pde files
+	- pdeFiles 		-> In diesen ordner kommen die sketch folder mit den .pde files
 	- output.html 	-> was das skript dir ausspuckt
 	- README.txt	-> dieses dokument
 
@@ -20,7 +20,7 @@
 
 
 > step by step:
-	0. ziehe deine .pde dokumente in den perlScript/pdeFiles ordner
+	0. ziehe deine sketch ordner in den perlScript/pdeFiles ordner
 	1. wenn in dem /perlScript ordner kein output.html ist, erstelle es!
 	2. öffne ein terminal und geh in den perlScript ordner (cd <filepath>)
 	3. starte das script mit: perl script.pl
@@ -31,8 +31,9 @@
 	- perl command geht nicht? Installier perl! https://www.perl.org/get.html
 	- komische errors?
 		- check ob dein output dokument output.html heißt.
-		- check ob die files im pdeFiles ordner .pde files sind
-		- check ob du einen pdeFiles ordner überhaupt hast, du noob
+		- die .pde files müssen den namen der ordner haben (zB sketch_2_1_a -> 2_1_a.pde)
+> known issues:
+	- < oder > im processing code kann zu fehlern im html führen
 
           __
      w  c(..)o   (
