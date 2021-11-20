@@ -34,7 +34,7 @@
 		- check ob dein output dokument output.html heißt.
 		- die .pde files müssen den namen der ordner haben (zB sketch_2_1_a -> 2_1_a.pde)
 > known issues:
-	- < oder > im processing code kann zu fehlern im html führen
+	- < im processing code kann zu fehlern im html führen und muss durch &lt; ersetzt werden
 
           __
      w  c(..)o   (
