@@ -13,6 +13,7 @@ open my $ofh, '>>', $outfile or die "$outfile: $!";
 # string to save the name of the task
 my $taskName; 
 my $fileName;
+my $subName;
 
 my $useImg = 0;
 my $choice;
@@ -22,8 +23,8 @@ while (defined(my $file = glob "pdeFiles/*")) {
   
   open my $ifh, "<", "$file/$fileName";  # open taskFolder/task.pde 
  
-  $taskName = substr($file, 16); # cut the name of $file to the task name
-  
+  $taskName = substr($file, 16, 3); # cut the name of $file to the task name
+  $subName = substr($file, 20);
   
   # ask for image/live block
   print "image or live code for $fileName? [i/l] >\n";
@@ -39,7 +40,7 @@ while (defined(my $file = glob "pdeFiles/*")) {
   # add top html
   print $ofh "\n <!--$taskName--> \n";
   print $ofh "<h2 class=\"green\">$taskName</h2>", "\n";
-  print $ofh '<h2 class="purple" >b, c</h2>', "\n";
+  print $ofh "<h2 class=\"purple\" >$subName</h2>", "\n";
   print $ofh '<pre class="code" style="position:relative; top:0px;">', "\n";
   print $ofh "<code class=\"processing-html\" id=\"task_$taskName\">", "\n";
   #loop over each line of the infile and copy it to the outfile
