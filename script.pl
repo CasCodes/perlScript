@@ -3,7 +3,7 @@
 
 use warnings;
 use strict;
-use autodie; #DIE DIE DIE, IT'S MUFFIN TIME!
+use autodie;
 
 my $outfile = 'output.html';
 
